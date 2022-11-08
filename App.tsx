@@ -6,10 +6,10 @@ import {
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
 
-import { SignIn } from "./src/screens/Signin";
 import { Loading } from "./src/components/Loading";
 import { THEME } from "./src/assets/styles/theme";
 import { AuthContextProvider } from "./src/context/AuthContext";
+import { Routes } from "./src/routes/index";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,7 +26,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <SignIn /> : <Loading />}
+        {fontsLoaded ? <Routes /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
